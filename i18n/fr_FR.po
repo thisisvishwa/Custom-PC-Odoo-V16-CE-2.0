@@ -1,0 +1,113 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-01 00:00+0000\n"
+"PO-Revision-Date: 2023-04-01 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: French\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: custom_pc_builder
+#: model:ir.model,name:custom_pc_builder.model_custom_pc_component
+msgid "Custom PC Component"
+msgstr "Composant PC personnalisé"
+
+#. module: custom_pc_builder
+#: model:ir.model,name:custom_pc_builder.model_custom_pc_build
+msgid "Custom PC Build"
+msgstr "Configuration PC personnalisée"
+
+#. module: custom_pc_builder
+#: model:ir.model,name:custom_pc_builder.model_compatibility_check_result
+msgid "Compatibility Check Result"
+msgstr "Résultat de vérification de compatibilité"
+
+#. module: custom_pc_builder
+#: model:ir.model,name:custom_pc_builder.model_price_availability_data
+msgid "Price Availability Data"
+msgstr "Données de disponibilité et de prix"
+
+#. module: custom_pc_builder
+#: code:addons/custom_pc_builder/models/custom_pc.py:0
+msgid "Custom PCs"
+msgstr "PCs personnalisés"
+
+#. module: custom_pc_builder
+#: code:addons/custom_pc_builder/static/src/js/custom_pc_configurator.js:0
+msgid "Component added to your build."
+msgstr "Composant ajouté à votre configuration."
+
+#. module: custom_pc_builder
+#: code:addons/custom_pc_builder/static/src/js/custom_pc_configurator.js:0
+msgid "Component removed from your build."
+msgstr "Composant retiré de votre configuration."
+
+#. module: custom_pc_builder
+#: code:addons/custom_pc_builder/static/src/js/custom_pc_configurator.js:0
+msgid "Budget exceeded."
+msgstr "Budget dépassé."
+
+#. module: custom_pc_builder
+#: code:addons/custom_pc_builder/static/src/js/custom_pc_configurator.js:0
+msgid "This component is not compatible."
+msgstr "Ce composant n'est pas compatible."
+
+#. module: custom_pc_builder
+#: code:addons/custom_pc_builder/static/src/js/custom_pc_configurator.js:0
+msgid "There are validation errors in your build."
+msgstr "Il y a des erreurs de validation dans votre configuration."
+
+#. module: custom_pc_builder
+#: code:addons/custom_pc_builder/util/compatibility_checker.py:0
+msgid "Power supply is insufficient for the selected components."
+msgstr "L'alimentation est insuffisante pour les composants sélectionnés."
+
+#. module: custom_pc_builder
+#: code:addons/custom_pc_builder/util/compatibility_checker.py:0
+msgid "Selected components will not fit in the chosen case."
+msgstr "Les composants sélectionnés ne rentrent pas dans le boîtier choisi."
+
+#. module: custom_pc_builder
+#: code:addons/custom_pc_builder/util/compatibility_checker.py:0
+msgid "Motherboard and CPU socket types do not match."
+msgstr "Les types de socket de la carte mère et du CPU ne correspondent pas."
+
+#. module: custom_pc_builder
+#: code:addons/custom_pc_builder/views/custom_pc_views.xml:0
+msgid "Configure your Custom PC"
+msgstr "Configurez votre PC personnalisé"
+
+#. module: custom_pc_builder
+#: code:addons/custom_pc_builder/wizards/pc_builder_wizard.py:0
+msgid "PC Builder Wizard"
+msgstr "Assistant de configuration PC"
+
+#. module: custom_pc_builder
+#: code:addons/custom_pc_builder/reports/custom_pc_reports.xml:0
+msgid "Custom PC Report"
+msgstr "Rapport de PC personnalisé"
+
+#. module: custom_pc_builder
+#: code:addons/custom_pc_builder/doc/user_guide.md:0
+msgid "User Guide"
+msgstr "Guide de l'utilisateur"
+
+#. module: custom_pc_builder
+#: code:addons/custom_pc_builder/doc/administrator_guide.md:0
+msgid "Administrator Guide"
+msgstr "Guide de l'administrateur"
+
+#. module: custom_pc_builder
+#: code:addons/custom_pc_builder/doc/installation_guide.md:0
+msgid "Installation Guide"
+msgstr "Guide d'installation"
+
+#. module: custom_pc_builder
+#: code:addons/custom_pc_builder/doc/changelog.md:0
+msgid "Changelog"
+msgstr "Journal des modifications"

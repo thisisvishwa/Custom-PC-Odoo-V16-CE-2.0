@@ -1,0 +1,54 @@
+<odoo>
+    <data>
+
+        <!-- PC Builder Wizard Form View -->
+        <record id="view_pc_builder_wizard_form" model="ir.ui.view">
+            <field name="name">pc.builder.wizard.form</field>
+            <field name="model">pc.builder.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Custom PC Builder">
+                    <group>
+                        <field name="name"/>
+                        <field name="budget"/>
+                    </group>
+                    <notebook>
+                        <page string="Components">
+                            <field name="component_ids" widget="many2many_tags" options="{'no_create': True}">
+                                <tree editable="bottom">
+                                    <field name="category_id"/>
+                                    <field name="name"/>
+                                    <field name="price"/>
+                                    <field name="quantity"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Configuration Summary">
+                            <field name="configuration_notes" nolabel="1"/>
+                        </page>
+                    </notebook>
+                    <footer>
+                        <button string="Validate" type="object" name="action_validate" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- PC Builder Wizard Action -->
+        <record id="action_pc_builder_wizard" model="ir.actions.act_window">
+            <field name="name">Custom PC Builder</field>
+            <field name="res_model">pc.builder.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_pc_builder_wizard_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <!-- PC Builder Wizard Menu Item -->
+        <menuitem id="menu_pc_builder_wizard"
+                  name="PC Builder Wizard"
+                  action="action_pc_builder_wizard"
+                  parent="custom_pc.custom_pc_menu"
+                  sequence="10"/>
+
+    </data>
+</odoo>

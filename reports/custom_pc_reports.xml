@@ -1,0 +1,49 @@
+<odoo>
+    <report id="custom_pc_report" string="Custom PC Report" model="custom.pc" report_type="qweb-pdf">
+        <template id="custom_pc_report_template">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="oe_structure"/>
+                        <h1>Custom PC Build Report</h1>
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>Component Type</th>
+                                    <th>Component Name</th>
+                                    <th>Price</th>
+                                    <th>Vendor</th>
+                                    <th>Compatibility Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="doc.components" t-as="component">
+                                    <tr>
+                                        <td><t t-esc="component.type_id.name"/></td>
+                                        <td><t t-esc="component.name"/></td>
+                                        <td><t t-esc="component.price" t-options='{"widget": "monetary", "display_currency": "doc.currency_id"}'/></td>
+                                        <td><t t-esc="component.vendor_id.name"/></td>
+                                        <td><t t-if="component.compatibility_status">Compatible</t><t t-else="">Incompatible</t></td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        <div class="oe_structure"/>
+                        <div>
+                            <strong>Total Price:</strong>
+                            <span t-esc="doc.total_price" t-options='{"widget": "monetary", "display_currency": "doc.currency_id"}'/>
+                        </div>
+                        <div>
+                            <strong>Budget:</strong>
+                            <span t-esc="doc.budget" t-options='{"widget": "monetary", "display_currency": "doc.currency_id"}'/>
+                        </div>
+                        <div>
+                            <strong>Status:</strong>
+                            <span t-esc="doc.status"/>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </report>
+</odoo>

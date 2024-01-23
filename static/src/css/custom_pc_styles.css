@@ -1,0 +1,69 @@
+/* Custom PC Module Styles */
+
+/* General Styles */
+body.custom-pc-builder {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Component Configuration Styles */
+#pc-component-selector {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Budget Management Styles */
+#pc-build-budget {
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Validation and Compatibility Check Styles */
+#pc-build-validation,
+#pc-compatibility-check {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#pc-build-validation.warning,
+#pc-compatibility-check.warning {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+}
+
+#pc-build-validation.error,
+#pc-compatibility-check.error {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+#pc-build-validation.success,
+#pc-compatibility-check.success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+/* Order Summary Styles */
+#pc-order-summary {
+    background-color: #f9f9f9;
+    border: 1px solid #eaeaea;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body.custom-pc-builder {
+        padding: 15px;
+    }
+
+    #pc-component-selector,
+    #pc-build-budget {
+        width: auto;
+    }
+}

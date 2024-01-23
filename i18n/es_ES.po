@@ -1,0 +1,123 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-01 00:00+0000\n"
+"PO-Revision-Date: 2023-04-01 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Spanish\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: custom_pc_builder
+#: model:custom_pc.custom_pc_component,name:custom_pc.CUSTOM_PC_CATEGORY_ID
+msgid "Custom PCs"
+msgstr "PCs Personalizados"
+
+#. module: custom_pc_builder
+#: model:ir.ui.view,arch_db:custom_pc_templates.xml
+msgid "Configure your Custom PC"
+msgstr "Configura tu PC Personalizado"
+
+#. module: custom_pc_builder
+#: model:ir.ui.view,arch_db:custom_pc_templates.xml
+msgid "Real-time Price and Availability"
+msgstr "Precio y Disponibilidad en Tiempo Real"
+
+#. module: custom_pc_builder
+#: model:ir.ui.view,arch_db:custom_pc_templates.xml
+msgid "Set your Budget"
+msgstr "Establece tu Presupuesto"
+
+#. module: custom_pc_builder
+#: model:ir.ui.view,arch_db:custom_pc_templates.xml
+msgid "Build Validation"
+msgstr "Validación de la Configuración"
+
+#. module: custom_pc_builder
+#: model:ir.ui.view,arch_db:custom_pc_templates.xml
+msgid "Compatibility Check"
+msgstr "Verificación de Compatibilidad"
+
+#. module: custom_pc_builder
+#: model:ir.ui.view,arch_db:custom_pc_templates.xml
+msgid "Generate Order"
+msgstr "Generar Pedido"
+
+#. module: custom_pc_builder
+#: model:ir.ui.view,arch_db:custom_pc_templates.xml
+msgid "Component Added"
+msgstr "Componente Añadido"
+
+#. module: custom_pc_builder
+#: model:ir.ui.view,arch_db:custom_pc_templates.xml
+msgid "Component Removed"
+msgstr "Componente Eliminado"
+
+#. module: custom_pc_builder
+#: model:ir.ui.view,arch_db:custom_pc_templates.xml
+msgid "Budget Exceeded"
+msgstr "Presupuesto Excedido"
+
+#. module: custom_pc_builder
+#: model:ir.ui.view,arch_db:custom_pc_templates.xml
+msgid "Incompatible Component"
+msgstr "Componente Incompatible"
+
+#. module: custom_pc_builder
+#: model:ir.ui.view,arch_db:custom_pc_templates.xml
+msgid "Validation Error"
+msgstr "Error de Validación"
+
+#. module: custom_pc_builder
+#: model:ir.ui.view,arch_db:custom_pc_templates.xml
+msgid "User Guide"
+msgstr "Guía del Usuario"
+
+#. module: custom_pc_builder
+#: model:ir.ui.view,arch_db:custom_pc_templates.xml
+msgid "Administrator Guide"
+msgstr "Guía del Administrador"
+
+#. module: custom_pc_builder
+#: model:ir.ui.view,arch_db:custom_pc_templates.xml
+msgid "Installation Guide"
+msgstr "Guía de Instalación"
+
+#. module: custom_pc_builder
+#: model:ir.ui.view,arch_db:custom_pc_templates.xml
+msgid "Popular Component Configurations"
+msgstr "Configuraciones de Componentes Populares"
+
+#. module: custom_pc_builder
+#: model:ir.ui.view,arch_db:custom_pc_templates.xml
+msgid "User Preferences"
+msgstr "Preferencias de Usuario"
+
+#. module: custom_pc_builder
+#: model:ir.ui.view,arch_db:custom_pc_templates.xml
+msgid "Common Configurations"
+msgstr "Configuraciones Comunes"
+
+#. module: custom_pc_builder
+#: model:ir.ui.view,arch_db:custom_pc_templates.xml
+msgid "Customer Details"
+msgstr "Detalles del Cliente"
+
+#. module: custom_pc_builder
+#: model:ir.ui.view,arch_db:custom_pc_templates.xml
+msgid "Payment Information"
+msgstr "Información de Pago"
+
+#. module: custom_pc_builder
+#: model:ir.model.access,name:custom_pc.access_custom_pc_user
+msgid "Custom PC User"
+msgstr "Usuario de PC Personalizado"
+
+#. module: custom_pc_builder
+#: model:ir.model.access,name:custom_pc.access_custom_pc_manager
+msgid "Custom PC Manager"
+msgstr "Gestor de PC Personalizado"

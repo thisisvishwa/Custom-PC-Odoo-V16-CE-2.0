@@ -1,0 +1,75 @@
+<odoo>
+    <data>
+
+        <!-- External API Integration Form View -->
+        <record id="view_external_api_integration_form" model="ir.ui.view">
+            <field name="name">external.api.integration.form</field>
+            <field name="model">external.api.integration</field>
+            <field name="arch" type="xml">
+                <form string="External API Integration">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="api_url"/>
+                            <field name="api_key"/>
+                            <field name="vendor_id"/>
+                        </group>
+                        <group string="API Settings">
+                            <field name="request_timeout"/>
+                            <field name="active" widget="boolean_toggle"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- External API Integration Tree View -->
+        <record id="view_external_api_integration_tree" model="ir.ui.view">
+            <field name="name">external.api.integration.tree</field>
+            <field name="model">external.api.integration</field>
+            <field name="arch" type="xml">
+                <tree string="External API Integration">
+                    <field name="name"/>
+                    <field name="api_url"/>
+                    <field name="vendor_id"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- External API Integration Search View -->
+        <record id="view_external_api_integration_search" model="ir.ui.view">
+            <field name="name">external.api.integration.search</field>
+            <field name="model">external.api.integration</field>
+            <field name="arch" type="xml">
+                <search string="External API Integration">
+                    <field name="name"/>
+                    <field name="vendor_id"/>
+                    <filter string="Active" name="filter_active" domain="[('active','=',True)]"/>
+                    <filter string="Inactive" name="filter_inactive" domain="[('active','=',False)]"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- External API Integration Action -->
+        <record id="action_external_api_integration" model="ir.actions.act_window">
+            <field name="name">External API Integration</field>
+            <field name="res_model">external.api.integration</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_external_api_integration_tree"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Define the API integrations to fetch real-time prices and availability of PC components.
+                </p>
+            </field>
+        </record>
+
+        <!-- External API Integration Menu Item -->
+        <menuitem id="menu_external_api_integration"
+                  name="External API Integration"
+                  parent="custom_pc.custom_pc_root_menu"
+                  action="action_external_api_integration"
+                  sequence="10"/>
+
+    </data>
+</odoo>
