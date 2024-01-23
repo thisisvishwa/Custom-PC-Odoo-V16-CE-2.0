@@ -1,0 +1,76 @@
+<odoo>
+    <data>
+        <!-- Custom PC Configuration Report Template -->
+        <template id="custom_pc_report_template">
+            <t t-name="custom_pc_building_module.report_custom_pc_configuration">
+                <t t-call="web.html_container">
+                    <t t-foreach="docs" t-as="doc">
+                        <t t-call="web.external_layout">
+                            <div class="page">
+                                <div class="oe_structure"/>
+                                <h2>Custom PC Configuration Report</h2>
+                                <table class="table table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th>Component Type</th>
+                                            <th>Component Name</th>
+                                            <th>Quantity</th>
+                                            <th>Unit Price</th>
+                                            <th>Subtotal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="doc.component_lines" t-as="line">
+                                            <tr>
+                                                <td>
+                                                    <span t-field="line.component_id.type"/>
+                                                </td>
+                                                <td>
+                                                    <span t-field="line.component_id.name"/>
+                                                </td>
+                                                <td>
+                                                    <span t-field="line.quantity"/>
+                                                </td>
+                                                <td>
+                                                    <span t-field="line.price_unit" t-options='{"widget": "monetary", "display_currency": "doc.currency_id"}'/>
+                                                </td>
+                                                <td>
+                                                    <span t-field="line.price_subtotal" t-options='{"widget": "monetary", "display_currency": "doc.currency_id"}'/>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                                <div class="oe_structure"/>
+                                <div>
+                                    <strong>Total:</strong>
+                                    <span t-field="doc.amount_total" t-options='{"widget": "monetary", "display_currency": "doc.currency_id"}'/>
+                                </div>
+                                <div class="oe_structure"/>
+                                <div>
+                                    <strong>Compatibility Check:</strong>
+                                    <p t-if="doc.compatibility_check_result">
+                                        <span t-field="doc.compatibility_check_result"/>
+                                    </p>
+                                    <p t-if="not doc.compatibility_check_result">
+                                        No compatibility issues detected.
+                                    </p>
+                                </div>
+                                <div class="oe_structure"/>
+                                <div>
+                                    <strong>Build Validation:</strong>
+                                    <p t-if="doc.build_validation_result">
+                                        <span t-field="doc.build_validation_result"/>
+                                    </p>
+                                    <p t-if="not doc.build_validation_result">
+                                        All components are valid for the build.
+                                    </p>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

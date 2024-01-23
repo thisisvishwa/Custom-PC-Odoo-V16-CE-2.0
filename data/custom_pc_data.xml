@@ -1,0 +1,36 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Product Category for Custom PCs -->
+        <record id="product_category_custom_pc" model="product.category">
+            <field name="name">Custom PCs</field>
+        </record>
+
+        <!-- Access Rights for Custom PC Module -->
+        <record id="security.access_custom_pc_user" model="ir.model.access">
+            <field name="name">custom_pc_user_access</field>
+            <field name="model_id" ref="model_custom_pc"/>
+            <field name="group_id" ref="base.group_user"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="security.access_custom_pc_manager" model="ir.model.access">
+            <field name="name">custom_pc_manager_access</field>
+            <field name="model_id" ref="model_custom_pc"/>
+            <field name="group_id" ref="base.group_system"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <!-- Demo Data for Custom PC Configurations -->
+        <record id="demo_custom_pc_1" model="custom.pc">
+            <field name="name">Gaming PC Build</field>
+            <field name="category_id" ref="product_category_custom_pc"/>
+            <field name="budget" eval="1500"/>
+        </record>
+    </data>
+</odoo>

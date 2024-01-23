@@ -1,0 +1,56 @@
+<odoo>
+    <data noupdate="1">
+
+        <!-- Group for Custom PC Module User -->
+        <record id="group_custom_pc_user" model="res.groups">
+            <field name="name">Custom PC User</field>
+            <field name="category_id" ref="base.module_category_sales_management"/>
+        </record>
+
+        <!-- Group for Custom PC Module Manager -->
+        <record id="group_custom_pc_manager" model="res.groups">
+            <field name="name">Custom PC Manager</field>
+            <field name="category_id" ref="base.module_category_sales_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <!-- Access Control List for Custom PC User -->
+        <record id="access_custom_pc_user" model="ir.model.access">
+            <field name="name">custom_pc_user_access</field>
+            <field name="model_id" ref="model_custom_pc"/>
+            <field name="group_id" ref="group_custom_pc_user"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!-- Access Control List for Custom PC Manager -->
+        <record id="access_custom_pc_manager" model="ir.model.access">
+            <field name="name">custom_pc_manager_access</field>
+            <field name="model_id" ref="model_custom_pc"/>
+            <field name="group_id" ref="group_custom_pc_manager"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <!-- Record Rules for Custom PC User -->
+        <record id="custom_pc_user_rule" model="ir.rule">
+            <field name="name">Custom PC User Rule</field>
+            <field name="model_id" ref="model_custom_pc"/>
+            <field name="domain_force">[('create_uid', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('group_custom_pc_user'))]"/>
+        </record>
+
+        <!-- Record Rules for Custom PC Manager -->
+        <record id="custom_pc_manager_rule" model="ir.rule">
+            <field name="name">Custom PC Manager Rule</field>
+            <field name="model_id" ref="model_custom_pc"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('group_custom_pc_manager'))]"/>
+        </record>
+
+    </data>
+</odoo>

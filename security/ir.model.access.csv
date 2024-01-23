@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_custom_pc_user,custom_pc.user,model_custom_pc,base.group_user,1,0,0,0
+access_custom_pc_manager,custom_pc.manager,model_custom_pc,base.group_system,1,1,1,1
+access_custom_pc_component_user,custom_pc_component.user,model_custom_pc_component,base.group_user,1,0,0,0
+access_custom_pc_component_manager,custom_pc_component.manager,model_custom_pc_component,base.group_system,1,1,1,1
+access_custom_pc_build_user,custom_pc_build.user,model_custom_pc_build,base.group_user,1,0,0,0
+access_custom_pc_build_manager,custom_pc_build.manager,model_custom_pc_build,base.group_system,1,1,1,1
+access_custom_pc_order_user,custom_pc_order.user,model_custom_pc_order,base.group_user,1,0,0,0
+access_custom_pc_order_manager,custom_pc_order.manager,model_custom_pc_order,base.group_system,1,1,1,1

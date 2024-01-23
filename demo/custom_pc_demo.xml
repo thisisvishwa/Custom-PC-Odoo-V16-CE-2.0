@@ -1,0 +1,80 @@
+<odoo>
+    <data noupdate="1">
+
+        <!-- Product Category for Custom PCs -->
+        <record id="product_category_custom_pc" model="product.category">
+            <field name="name">Custom PCs</field>
+        </record>
+
+        <!-- Demo Products for Custom PC Components -->
+        <record id="product_custom_pc_cpu_demo" model="product.product">
+            <field name="name">Demo CPU for Custom PC</field>
+            <field name="categ_id" ref="product_category_custom_pc"/>
+            <field name="type">product</field>
+            <field name="list_price">250.00</field>
+        </record>
+
+        <record id="product_custom_pc_gpu_demo" model="product.product">
+            <field name="name">Demo GPU for Custom PC</field>
+            <field name="categ_id" ref="product_category_custom_pc"/>
+            <field name="type">product</field>
+            <field name="list_price">500.00</field>
+        </record>
+
+        <record id="product_custom_pc_ram_demo" model="product.product">
+            <field name="name">Demo RAM for Custom PC</field>
+            <field name="categ_id" ref="product_category_custom_pc"/>
+            <field name="type">product</field>
+            <field name="list_price">150.00</field>
+        </record>
+
+        <record id="product_custom_pc_storage_demo" model="product.product">
+            <field name="name">Demo Storage for Custom PC</field>
+            <field name="categ_id" ref="product_category_custom_pc"/>
+            <field name="type">product</field>
+            <field name="list_price">100.00</field>
+        </record>
+
+        <record id="product_custom_pc_case_demo" model="product.product">
+            <field name="name">Demo Case for Custom PC</field>
+            <field name="categ_id" ref="product_category_custom_pc"/>
+            <field name="type">product</field>
+            <field name="list_price">80.00</field>
+        </record>
+
+        <record id="product_custom_pc_psu_demo" model="product.product">
+            <field name="name">Demo PSU for Custom PC</field>
+            <field name="categ_id" ref="product_category_custom_pc"/>
+            <field name="type">product</field>
+            <field name="list_price">120.00</field>
+        </record>
+
+        <record id="product_custom_pc_motherboard_demo" model="product.product">
+            <field name="name">Demo Motherboard for Custom PC</field>
+            <field name="categ_id" ref="product_category_custom_pc"/>
+            <field name="type">product</field>
+            <field name="list_price">200.00</field>
+        </record>
+
+        <record id="product_custom_pc_cooling_demo" model="product.product">
+            <field name="name">Demo Cooling System for Custom PC</field>
+            <field name="categ_id" ref="product_category_custom_pc"/>
+            <field name="type">product</field>
+            <field name="list_price">70.00</field>
+        </record>
+
+        <!-- Demo Custom PC Build -->
+        <record id="demo_custom_pc_1" model="product.template">
+            <field name="name">Demo Custom PC Build</field>
+            <field name="categ_id" ref="product_category_custom_pc"/>
+            <field name="type">consu</field>
+            <field name="list_price">1370.00</field>
+            <field name="sale_ok">True</field>
+            <field name="purchase_ok">False</field>
+            <field name="invoice_policy">order</field>
+            <field name="expense_policy">no</field>
+            <field name="optional_product_ids" eval="[(6, 0, [ref('product_custom_pc_cpu_demo'), ref('product_custom_pc_gpu_demo'), ref('product_custom_pc_ram_demo'), ref('product_custom_pc_storage_demo'), ref('product_custom_pc_case_demo'), ref('product_custom_pc_psu_demo'), ref('product_custom_pc_motherboard_demo'), ref('product_custom_pc_cooling_demo')])]"/>
+        </record>
+
+    </data>
+</odoo>
